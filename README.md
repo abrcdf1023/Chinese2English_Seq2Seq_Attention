@@ -22,7 +22,7 @@ train, translate functions is provided in this project now.
     ```sh
     $ python3 run_nn.py translate 湯姆累了。
     
-    湯姆累了。->tom tried . 
+    tom was tired .
     ```
 
 ### Result
