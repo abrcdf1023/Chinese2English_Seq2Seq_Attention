@@ -5,6 +5,11 @@ import os
 import io
 import jieba
 import tensorflow as tf
+import logging
+
+logger = tf.get_logger()
+logger.setLevel(logging.FATAL)
+jieba.setLogLevel(logging.INFO)
 
 def preprocess_eng_sentence(w):
     w = w.lower().strip()
