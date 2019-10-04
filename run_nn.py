@@ -105,10 +105,9 @@ def train():
 def translate():
     # preprocessing the original_sentence
     init_jieba_dict()
-    original_sentence = input("\nPlease enter chinese sentence:")
+    original_sentence = sys.argv[2]
     sentence = seg2words(original_sentence)
     sentence = preprocess_ch_sentence(sentence)
-    print()
     INP_MAX_LEN, INP_VOCAB_SIZE, TARG_MAX_LEN, TARG_VOCAB_SIZE = load_max_length("./dataset/max_len.txt")
     INP_W2I = load_word2index("./dataset/input_dict.txt")
     TARG_I2W = load_index2word("./dataset/target_dict.txt")
@@ -157,12 +156,12 @@ def translate():
         # the predicted ID is fed back into the model
         dec_input = tf.expand_dims([predicted_id], 0)
     
-    print("\n"+"> "+original_sentence+"->"+result.rstrip(" <end>")+"\n")
+    print(result.rstrip(" <end>"))
 
 if __name__ == '__main__':
 
-    if len(sys.argv) != 2 or sys.argv[1] not in ['train','translate']:
-        raise ValueError("""usage: python run_nn.py [train/translate]""")
+    # if len(sys.argv) != 2 or sys.argv[1] not in ['train','translate']:
+    #     raise ValueError("""usage: python run_nn.py [train/translate]""")
 
     if sys.argv[1] == 'train':
         train()
