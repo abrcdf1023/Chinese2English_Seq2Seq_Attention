@@ -1,5 +1,6 @@
 # Chinese2English_Seq2Seq_Attention
 
+test
 A Sequence to Sequence with Attention Model for translate chinese sentence to english sentence.
 Reference to the paper: [https://aclweb.org/anthology/D15-1166]
 
