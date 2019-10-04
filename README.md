@@ -20,9 +20,7 @@ train, translate functions is provided in this project now.
     ```
 - transalte: after input this command line will show the input line for typing your single chinese sentence. Press Ctrl+C to leave. ( This project provides the model trained only 5 EPOCHS. )
     ```sh
-    $ python3 run_nn.py translate
-    
-    > Please enter chinese sentence: 湯姆累了。
+    $ python3 run_nn.py translate 湯姆累了。
     
     湯姆累了。->tom tried . 
     ```
